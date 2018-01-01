@@ -1,2 +1,0 @@
-# joonhok
-personal website

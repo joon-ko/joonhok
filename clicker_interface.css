@@ -1,0 +1,189 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.left-side {
+	float: left;
+	width: 50%;
+}
+
+.right-side {
+	float: left;
+	width: 50%;
+}
+
+.title {
+	margin-left: 2em;
+	line-height: 1em;
+}
+
+.game {
+	margin: 0em 2em 2em 2em;
+	width: 95%;
+}
+
+.stats, .supply-box, .interface, .spells, .passive, .log, .fight, .achievements, .auto, .upgrades, .save {
+	border: 2px solid rgba(0,0,0,0.5);
+	border-radius: 10px;
+}
+
+.stats {
+	margin-top: 1em;
+	width: 90%;
+}
+
+.supply-box {
+	margin-top: 1em;
+	width: 90%;
+}
+
+.interface { 
+	margin-top: 1em;
+	width: 90%;
+}
+
+.rune-items, .spell-items, .wizards, .upgrade-items, .achievement-items {
+	margin-left: 1em;
+}
+
+.padbot05 {
+	margin-bottom: 0.5em;
+}
+
+.spells {
+	margin-top: 1em;
+	width: 90%;
+}
+
+.passive {
+	margin-top: 1em;
+	width: 90%;
+	padding-right: 1em;
+}
+
+.log { 
+	margin-top: 1em;
+	width: 90%;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.fight {
+	margin-top: 1em;
+	width: 90%;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.achievements {
+	margin-top: 1em;
+	width: 90%;
+	padding-right: 1em;
+}
+
+.auto {
+	margin-top: 1em;
+	width: 90%;
+	padding-right: 1em;	
+}
+
+.upgrades {
+	margin-top: 1em;
+	width: 90%;
+	padding-right: 1em;
+}
+
+.save {
+	margin-top: 1em;
+	width: 90%;
+	padding-left: 1em;
+	padding-right: 1em;	
+}
+
+#air-rate, #water-rate, #earth-rate, #fire-rate {
+	color: green;
+}
+
+#gust, #air-rune-craft, #air-wizard-buy, #passive-air {
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 5px;
+}
+
+#gale {
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 5px;
+}
+
+#splash, #water-rune-craft, #water-wizard-buy, #passive-water {
+	background-color: #cce6ff;
+	border-radius: 5px;
+}
+
+#wave {
+	background-color: #80bfff;
+	border-radius: 5px;
+}
+
+#boulder, #earth-rune-craft, #earth-wizard-buy, #passive-earth {
+	background-color: #ffbf80;
+	border-radius: 5px;
+}
+
+#upearth {
+	background-color: #ff8000;
+	border-radius: 5px;
+}
+
+#game-end {
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+
+#ignite, #fire-rune-craft, #fire-wizard-buy, #passive-fire, #power-button {
+	background-color: #ff6666;
+	border-radius: 5px;
+}
+
+#supply-button {
+	background-color: #5cd65c;
+	border-radius: 5px;
+}
+
+#flamethrower {
+	background-color: #e60000;
+	border-radius: 5px;
+}
+
+/* li {
+	list-style-type: none;
+	padding-left: 0px;
+} */
+
+ul {
+    list-style: none;
+    padding-left: 1em;
+    font-size: 14px;
+}​
+
+li {
+	font-size: 14px;
+}
+
+p {
+	font-size: 14px;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 900;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 12px;
+}
+

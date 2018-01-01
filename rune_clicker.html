@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rune: v_elemental</title>
+		<link rel="stylesheet" type="text/css" href="clicker_interface.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+		<script type="text/javascript" src="click_main.js"></script>
+		<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+	</head>
+	<body onload="load_game(); load_trivia()">
+		<div class="title">
+			<h2>rune: v_elemental</h2>
+			<h3><span id="did-you-know"></span></h3>
+			<h4>version 0.2: upgrades, rune caps, achievements!</h3>
+		</div>
+
+		<div class="game">
+
+		<div class="left-side">
+
+			<div class="log">
+				<p><span id="log-text">you are a magician in training, honing your skills in hopes of becoming one of the strongest spellcasters alive. what will you do?</span></p>
+			</div>					
+
+			<div class="interface">
+			<ul>
+				<li class="padbot05"><button id="air-rune-craft" onclick="rune_click('air')">craft air rune</button></li>
+				<li class="padbot05"><button id="water-rune-craft" onclick="rune_click('water')">craft water rune</button>
+					<span id="show-water-rune">(level 3)</span></li>
+				<li class="padbot05"><button id="earth-rune-craft" onclick="rune_click('earth')">craft earth rune</button>
+					<span id="show-earth-rune">(level 5)</span></li>
+				<li><button id="fire-rune-craft" onclick="rune_click('fire')">craft fire rune</button>
+					<span id="show-fire-rune">(level 7)</span></li>
+			</ul>
+			</div>		
+
+			<div class="spells">
+			<ul>
+				<li class="padbot05">spells:</li>
+				<div class="spell-items">
+				<li class="padbot05"><button id="gust" onclick="gust()">gust</button> (10 air, 1 dmg)</li>
+				<li class="padbot05"><button id="gale" onclick="gale()">gale</button> (20 air, 2 dmg)</li>
+				<li class="padbot05"><button id="splash" onclick="splash()">splash</button> (19 water, 2 dmg)</li>
+				<li class="padbot05"><button id="wave" onclick="wave()">wave</button> (36 water runes, 4 dmg)</li>
+				<li class="padbot05"><button id="boulder" onclick="boulder()">boulder</button> (18 earth, 2 dmg)</li>
+				<li class="padbot05"><button id="upearth" onclick="upearth()">upearth</button> (34 earth, 4 dmg)</li>
+				<li class="padbot05"><button id="ignite" onclick="ignite()">ignite</button> (7 fire, 1 dmg)</li>
+				<li><button id="flamethrower" onclick="flamethrower()">flamethrower</button> (70 fire, 12 dmg)</li>
+				</div>
+			</ul>
+			</div>
+
+			<div class="achievements">
+			<ul>
+				<li class="padbot05">achievements:</li>
+				<div class="achievement-items">
+				<li class="padbot05"><span id="ach-one-click"></span></li>
+				<li class="padbot05"><span id="ach-level-five"></span></li>
+				<li class="padbot05"><span id="ach-level-ten"></span></li>
+				<li class="padbot05"><span id="ach-max-supply"></span></li>
+				<li><span id="ach-world"></span></li>
+				</div>
+			</ul>
+			</div>
+
+		</div>
+
+		<div class="right-side">
+
+			<div class="stats">
+				<ul>
+					<li>level: <span id="level">1</span></li>
+					<li>exp: <span id="exp">0</span></li>
+					<li>to next level: <span id="exp-next">15</span></li>
+					<li>crafts/click: <span id="manual-power">1</span></li>
+				</ul>
+			</div>		
+
+			<div class="supply-box">
+				<ul>
+					<li class="padbot05">runes:</li>
+					<div class="rune-items">
+					<li>air: <span id="air-rune-qty">0</span>/<span id="air-supply">300</span> <span id="air-rate"></span></li>
+					<li>water: <span id="water-rune-qty">0</span>/<span id="water-supply">300</span> <span id="water-rate"></span></li>
+					<li>earth: <span id="earth-rune-qty">0</span>/<span id="earth-supply">300</span> <span id="earth-rate"></span></li>
+					<li>fire: <span id="fire-rune-qty">0</span>/<span id="fire-supply">300</span> <span id="fire-rate"></span></li>				
+					</div>
+				</ul>
+			</div>	
+
+			<div class="auto">
+				<ul>
+					<li class="padbot05">wizards:</li>
+					<div class="wizards">
+						<li class="padbot05"><button id="air-wizard-buy" onclick="buy_wizard('air')">buy</button>  air wizard: <span id="air-wizard-qty">0</span> (20 air runes)</li>
+						<li class="padbot05"><button id="water-wizard-buy" onclick="buy_wizard('water')">buy</button>  water wizard: <span id="water-wizard-qty">0</span> (30 water runes)</li>
+						<li class="padbot05"><button id="earth-wizard-buy" onclick="buy_wizard('earth')">buy</button>  earth wizard: <span id="earth-wizard-qty">0</span> (40 earth runes)</li>
+						<li><button id="fire-wizard-buy" onclick="buy_wizard('fire')">buy</button> fire wizard: <span id="fire-wizard-qty">0</span> (50 fire runes)</li>
+					</div>
+				</ul>
+			</div>
+
+			<div class="upgrades">
+				<ul>
+					<li class="padbot05">upgrades:</li>
+					<div class="upgrade-items">
+						<li class="padbot05"><button id="supply-button" onclick="supply('air')">upgrade</button>  air rune capacity +50 (250 air runes)</li>
+						<li class="padbot05"><button id="supply-button" onclick="supply('water')">upgrade</button>  water rune capacity +50 (250 water runes)</li>
+						<li class="padbot05"><button id="supply-button" onclick="supply('earth')">upgrade</button>  earth rune capacity +50 (250 earth runes)</li>
+						<li class="padbot05"><button id="supply-button" onclick="supply('fire')">upgrade</button>  fire rune capacity +50 (250 fire runes)</li>
+						<li class="padbot05"><button id="power-button" onclick="power()">upgrade</button> +1 runes crafted/click (200 fire runes)</li>
+						<li><button id="game-end" onclick="end_game()">world spell</button> (1000 air, 1000 water, 1000 earth, 1000 fire)</li>
+					</div>
+				</ul>
+			</div>
+
+			<div class="save">
+				<ul>
+					<li class="padbot05"><button id="save-button" onclick="save_game()">save game</button> <i id="game-saved"></i></li>
+					<li><button id="reset-button" onclick="reset()">delete save</button> <i id="save-removed"></i></li>
+				</ul>
+			</div>
+		</div>
+
+		</div>
+	</body>
+</html>

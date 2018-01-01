@@ -1,0 +1,109 @@
+/* * {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+} */
+
+html {
+	min-height: 100%;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: auto;
+}
+
+.menu-coursework {
+  background-color: #E55126;
+}
+
+.menu-teaching {
+  background-color: #E5A227;
+}
+
+.menu-projects {
+  background-color: #0C73B8;
+}
+
+.menu-coursework, .menu-teaching, .menu-projects {
+  width: 30%;
+  height: 100%;
+  margin: 2em 0.2em 1em 0.2em;
+  color: whitesmoke;
+  float: left;
+  border-radius: 15px;
+}
+
+#title-section {
+	width: 80%;
+	margin: auto;
+	margin-top: 100px;
+
+}
+
+#title-text {
+	width: 80%;
+	margin-top: 1em;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+
+body {
+	background: -webkit-linear-gradient(#80bfff, #b3d9ff);
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Zilla Slab', serif;
+	font-size: 50px;
+	font-weight: 800;
+	border: 3px solid #3399ff;
+	border-radius: 10px;
+	width: 400px;
+	text-align: center;
+	margin: auto;
+}
+
+h2 {
+	font-family: 'Zilla Slab', serif;
+	font-size: 32px;
+	font-weight: bold;
+
+}
+
+p, li {
+	font-family: 'Cabin', sans-serif;
+	font-size: 14px;
+	text-align: left;
+	width: 75%;
+	margin: auto;
+	margin-top: 1em;
+	letter-spacing: 0.05em;
+}
+
+a:link, a:visited {
+	font-family: 'Cabin', sans-serif;
+	font-size: 14px;
+	color: #B22222;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.highlight {
+	font-size: 24px;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 900;
+	color: #FFF;
+}
+
+
+
+
+
+
+
+
